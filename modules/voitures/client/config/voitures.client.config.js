@@ -8,6 +8,7 @@ angular.module('voitures').run(['Menus',
       title: 'Voitures',
       state: 'voitures',
       type: 'dropdown',
+      //Permet d'afficher le sous menu à tout le monde
       roles: ['*']
     });
 
@@ -21,6 +22,7 @@ angular.module('voitures').run(['Menus',
     Menus.addSubMenuItem('topbar', 'voitures', {
       title: 'Ajouter Voitures',
       state: 'voitures.ajouter',
+      //Permet d'afficher le sous menu à un user
       roles: ['user']
     });
   }

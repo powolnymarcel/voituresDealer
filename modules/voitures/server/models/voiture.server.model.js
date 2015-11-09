@@ -38,6 +38,12 @@ var VoitureSchema = new Schema({
     trim: true,
     required: 'Le modele ne peut pas etre vide!'
   },
+  contact_email: {
+    type: String,
+    default: '',
+    trim: true,
+    required: 'Le mail ne peut pas etre vide!'
+  },
   province: {
     type: String,
     default: '',

@@ -7,15 +7,12 @@ angular.module('voitures').config(['$stateProvider',
     $stateProvider
       .state('voitures', {
         abstract: true,
-        url: '/',
+        url: '/voitures',
         template: '<ui-view/>'
       })
       .state('voitures.liste', {
-        url: '/voitures',
-        templateUrl: 'modules/voitures/client/views/liste-voitures.client.view.html',
-          data: {
-            roles: ['guest','user', 'admin']
-          }
+        url: '',
+        templateUrl: 'modules/voitures/client/views/liste-voitures.client.view.html'
       })
       .state('voitures.ajouter', {
         url: '/ajouter',

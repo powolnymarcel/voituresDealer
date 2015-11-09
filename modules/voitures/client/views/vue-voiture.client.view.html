@@ -1,9 +1,38 @@
-<section ng-controller="ArticlesController" ng-init="findOne()">
+<section ng-controller="VoituresController" ng-init="findOne()">
   <div class="page-header">
-    <h1 ng-bind="article.title"></h1>
+    <h1 >Sample voiture 1</h1>
   </div>
-  <div class="pull-right" ng-show="authentication.user._id == article.user._id">
-    <a class="btn btn-primary" ui-sref="articles.edit({articleId: article._id})">
+
+  <div class="row">
+    <div class="col-md-4">
+      <img src="modules/core/client/img/constructeurs/mercedes/a/1.jpg" class="img-thumbnail" alt="bmw i3"/>
+    </div>
+    <div class="col-md-8">
+      <ul>
+        <li>Constructeur : Audi</li>
+        <li>Modele : R8</li>
+        <li>Prix : 133.000$</li>
+        <li>Année : 2015</li>
+      </ul>
+    </div>
+  </div>
+  <br/>
+<div class="row">
+  <div class="col-md-12">
+    <p>Somewhere out in space live The Herculoids! Zok, the laser-ray dragon! Igoo, the giant rock ape! Tundro, the tremendous!
+    Gloop and Gleep, the formless, fearless wonders! With Zandor, their leader, and his wife, Tara, and son, Dorno, they team up to
+    protect their planet from sinister invaders! All-strong! All-brave! All-heroes! They're The Herculoids!</p>
+
+    <p>It doesn't matter what comes, fresh goes better in life, with Mentos fresh and full of Life! Nothing gets to you, stayin' fresh,
+    stayin' cool, with Mentos fresh and full of life! Fresh goes better! Mentos freshness! Fresh goes better with Mentos, fresh and full
+    of life! Mentos! The Freshmaker!  </p>
+    <a href="mailto:someone@example.com?Subject=Voitureo" target="_top" class="btn btn-success">Envoyer un mail</a>
+  </div>
+</div>
+  <br/><br/>
+
+  <div class="pull-right" ng-show="authentication.user._id == voiture.user._id">
+    <a class="btn btn-primary" ui-sref="voitures.edit({voitureId: voiture._id})">
       <i class="glyphicon glyphicon-edit"></i>
     </a>
     <a class="btn btn-primary" ng-click="remove();">
@@ -13,10 +42,10 @@
   <small>
     <em class="text-muted">
       Posted on
-      <span ng-bind="article.created | date:'mediumDate'"></span>
+      <span ng-bind="voiture.created | date:'mediumDate'"></span>
       by
-      <span ng-bind="article.user.displayName"></span>
+      <span ng-bind="voiture.user.displayName"></span>
     </em>
   </small>
-  <p class="lead" ng-bind="article.content"></p>
+  <p class="lead" ng-bind="voiture.content"></p>
 </section>

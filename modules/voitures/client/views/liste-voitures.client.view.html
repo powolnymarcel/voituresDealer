@@ -1,22 +1,53 @@
 <section ng-controller="VoituresController" data-ng-init="trouver()">
   <div class="page-header">
-    <h1>Dernières Voitures</h1>
+    <h1>Voitures</h1>
   </div>
 
-<div class="row">
+<div class="row voitures">
   <div class="col-md-3">
-    <img src="modules/core/client/img/cars.jpg" class="img-responsive" alt=""/>
+    <img src="modules/core/client/img/constructeurs/mercedes/a/1.jpg" class="img-thumbnail" alt=""/>
   </div>
   <div class="col-md-9">
-  <h3>Listing test 1</h3>
+  <h3>BMW i3</h3>
     <ul>
       <li>Constructeur : BMW</li>
       <li>Modele : i3</li>
       <li>Prix : 33.000$</li>
       <li>Année : 2015</li>
     </ul>
+    <a href="/#!/voitures/1" class="btn btn-default">Détails</a>
   </div>
 </div>
-
-
+  <hr/>
+  <div class="row voitures">
+    <div class="col-md-3">
+      <img src="modules/core/client/img/constructeurs/audi/r8/1.jpg" class="img-thumbnail" alt="bmw i3"/>
+    </div>
+    <div class="col-md-9">
+      <h3>Audi R8</h3>
+      <ul>
+        <li>Constructeur : Audi</li>
+        <li>Modele : R8</li>
+        <li>Prix : 133.000$</li>
+        <li>Année : 2015</li>
+      </ul>
+      <a href="/#!/voitures/1" class="btn btn-default">Détails</a>
+    </div>
+  </div>
+  <hr/>
+  <div class="row voitures">
+    <div class="col-md-3">
+      <img src="modules/core/client/img/constructeurs/mercedes/a/1.jpg" class="img-thumbnail" alt="bmw i3"/>
+    </div>
+    <div class="col-md-9">
+      <h3>Mercedes classe A</h3>
+      <ul>
+        <li>Constructeur : Mercedes</li>
+        <li>Modele : A</li>
+        <li>Prix : 42.000$</li>
+        <li>Année : 2015</li>
+      </ul>
+      <a href="/#!/voitures/1" class="btn btn-default">Détails</a>
+    </div>
+  </div>
 </section>

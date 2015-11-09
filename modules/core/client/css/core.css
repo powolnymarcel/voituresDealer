@@ -1,3 +1,6 @@
+*{
+  font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+}
 .content {
   margin-top: 50px;
 }
@@ -34,4 +37,29 @@ a:hover .header-profile-image {
 }
 .has-error .help-inline.error-text {
   display: inline;
+}
+
+.jumbotron{
+  padding: 10px;
+  text-align: left;
+  margin-top: 20px;
+
+}
+.labelduFormfinder{
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.labelduFormfinder>span{
+  margin-left: 5px;
+}
+.fa-car,.fa-tags,.fa-road{
+  float: left;
+  margin: 15px 10px 0px 0px;
+}
+select.form-control{
+  width: 80%;
+}
+.btnEnvoyer{
+  margin:0px 0px 0px 25px;
 }

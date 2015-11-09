@@ -53,7 +53,7 @@ a:hover .header-profile-image {
 .labelduFormfinder>span{
   margin-left: 5px;
 }
-.fa-car,.fa-tags,.fa-road{
+.fa-car,.fa-tags,.fa-road, .fa-sort-numeric-asc{
   float: left;
   margin: 15px 10px 0px 0px;
 }

@@ -1,0 +1,97 @@
+<section ng-controller="VoituresController">
+  <div class="page-header">
+    <h1><i class="fa fa-car"></i>
+      Ajouter une Voiture</h1>
+  </div>
+  <div class="col-md-12">
+
+
+    <form name="voitureForm" class="form-horizontal" data-ng-submit="creer()">
+
+      <div class="form-group">
+        <label class="control-label" for="titre">Titre:</label>
+        <div class="controls">
+          <input type="text" name="titre" id="titre" required="required" data-ng-model="titre" class="form-control"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="titre">Type:</label>
+        <div class="controls">
+          <input type="radio" data-ng-model="type" value="occasion" id="occasion" checked name="type"/><label class="control-label" for="occasion">Occasion</label>
+          <input type="radio" data-ng-model="type" value="nouveau"  id="nouveau" name="type"/><label class="control-label" for="nouveau">Nouveau</label>
+        </div>
+      </div>
+      <div class="form-group">
+      Constructeur:
+        <select name="constructeur" required="required" class="form-control" data-ng-model="constructeur">
+          <option value="audi">Audi</option>
+          <option value="bmw">BMW</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="toyota">Toyota</option>
+          <option value="vw">VW</option>
+        </select>
+      </div>
+      <div class="form-group">
+        Modele:
+        <select name="modele" class="form-control" required="required" data-ng-model="modele">
+          <option value="aaa">aaa</option>
+          <option value="bbb">bbb</option>
+          <option value="ccc">ccc</option>
+          <option value="ddd">ddd</option>
+          <option value="eee">eee</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="annee">Annee:</label>
+        <div class="controls">
+          <input type="number" name="annee" id="annee" data-ng-model="annee" class="form-control"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="prix">Prix:</label>
+        <div class="controls">
+          <input type="number" name="prix" id="prix" data-ng-model="prix" class="form-control"/>
+        </div>
+      </div>
+      <div class="form-group">
+        Province:
+        <select name="province" class="form-control" data-ng-model="province">
+          <option value="belgique">Toute la Belgique</option>
+          <option value="anvers">Anvers</option>
+          <option value="brabant-flamand">Brabant Flamand</option>
+          <option value="bruxelles-capitale">Bruxelles-Capitale</option>
+          <option value="flandre-ccidentale">Flandre occidentale</option>
+          <option value="flandre-orientale">Flandre orientale</option>
+          <option value="hainaut">Hainaut</option>
+          <option value="luxembourg">Luxembourg</option>
+          <option value="namur">Namur-Province</option>
+          <option value="liege">Province de Liège</option>
+          <option value="limbourg">Province de Limbourg</option>
+          <option value="brabant-wallon">Wallon Brabant</option></select>
+      </div>
+
+
+      <div class="form-group">
+        <div class="controls">
+          <label for="description" class="control-label">Description:</label>
+          <textarea name="description" id="description" data-ng-model="description" cols="30" rows="10" class="form-control"></textarea>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" class="btn btn-default"/>
+      </div>
+      <div class="text-danger" data-ng-show="error">
+        <strong data-ng-bind="error"></strong>
+      </div>
+    </form>
+
+
+
+
+
+
+
+
+  </div>
+</section>

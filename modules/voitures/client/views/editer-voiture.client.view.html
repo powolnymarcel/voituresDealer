@@ -6,24 +6,24 @@
   <div class="col-md-12">
 
 
-    <form name="voitureForm" class="form-horizontal" data-ng-submit="creer()">
+    <form name="voitureForm" class="form-horizontal" data-ng-submit="update(voitureForm)">
 
       <div class="form-group">
         <label class="control-label" for="titre">Titre:</label>
         <div class="controls">
-          <input type="text" name="titre" id="titre" required="required" data-ng-model="titre" class="form-control"/>
+          <input type="text" name="titre" id="titre" required="required" data-ng-model="voiture.titre" class="form-control"/>
         </div>
       </div>
       <div class="form-group">
         <label class="control-label" for="titre">Type:</label>
         <div class="controls">
-          <input type="radio" data-ng-model="type" value="occasion" id="occasion" checked name="type"/><label class="control-label" for="occasion">Occasion</label>
-          <input type="radio" data-ng-model="type" value="nouveau"  id="nouveau" name="type"/><label class="control-label" for="nouveau">Nouveau</label>
+          <input type="radio" data-ng-model="voiture.type" value="occasion" id="occasion" checked name="type"/><label class="control-label" for="occasion">Occasion</label>
+          <input type="radio" data-ng-model="voiture.type" value="nouveau"  id="nouveau" name="type"/><label class="control-label" for="nouveau">Nouveau</label>
         </div>
       </div>
       <div class="form-group">
         Constructeur:
-        <select name="constructeur" required="required" class="form-control" data-ng-model="constructeur">
+        <select name="constructeur" required="required" class="form-control" data-ng-model="voiture.constructeur">
           <option value="audi">Audi</option>
           <option value="bmw">BMW</option>
           <option value="mercedes">Mercedes</option>
@@ -33,7 +33,7 @@
       </div>
       <div class="form-group">
         Modele:
-        <select name="modele" class="form-control" required="required" data-ng-model="modele">
+        <select name="modele" class="form-control" required="required" data-ng-model="voiture.modele">
           <option value="aaa">aaa</option>
           <option value="bbb">bbb</option>
           <option value="ccc">ccc</option>
@@ -44,18 +44,18 @@
       <div class="form-group">
         <label class="control-label" for="annee">Annee:</label>
         <div class="controls">
-          <input type="number" name="annee" id="annee" data-ng-model="annee" class="form-control"/>
+          <input type="text" name="annee" id="annee" data-ng-model="voiture.annee" class="form-control"/>
         </div>
       </div>
       <div class="form-group">
         <label class="control-label" for="prix">Prix:</label>
         <div class="controls">
-          <input type="number" name="prix" id="prix" data-ng-model="prix" class="form-control"/>
+          <input type="text" name="prix" id="prix" data-ng-model="voiture.prix" class="form-control"/>
         </div>
       </div>
       <div class="form-group">
         Province:
-        <select name="province" class="form-control" data-ng-model="province">
+        <select name="province" class="form-control" data-ng-model="voiture.province">
           <option value="belgique">Toute la Belgique</option>
           <option value="anvers">Anvers</option>
           <option value="brabant-flamand">Brabant Flamand</option>
@@ -74,16 +74,48 @@
       <div class="form-group">
         <div class="controls">
           <label for="description" class="control-label">Description:</label>
-          <textarea name="description" id="description" data-ng-model="description" cols="30" rows="10" class="form-control"></textarea>
+          <textarea name="description" id="description" data-ng-model="voiture.description" cols="30" rows="10" class="form-control"></textarea>
         </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="contact_email">Email de contact:</label>
+        <div class="controls">
+          <input type="text" name="contact_email" id="contact_email" data-ng-model="voiture.contact_email" class="form-control"/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label" for="carburant">Carburant</label>
+        <div class="controls">
+          <input type="text" name="carburant" id="carburant" data-ng-model="voiture.carburant" class="form-control"/>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label class="control-label" for="transmission">Transmission</label>
+        <div class="controls">
+          <input type="text" name="transmission" id="transmission" data-ng-model="voiture.transmission" class="form-control"/>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label class="control-label" for="couleur">Couleur</label>
+        <div class="controls">
+          <input type="text" name="couleur" id="couleur" data-ng-model="voiture.couleur" class="form-control"/>
+        </div>
+      </div>
+
+
+      <div class="text-danger" data-ng-show="error">
+        <strong data-ng-bind="error"></strong>
       </div>
 
       <div class="form-group">
         <input type="submit" class="btn btn-default"/>
       </div>
-      <div class="text-danger" data-ng-show="error">
-        <strong data-ng-bind="error"></strong>
-      </div>
+
     </form>
 
 

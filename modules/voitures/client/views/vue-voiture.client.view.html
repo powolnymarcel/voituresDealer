@@ -8,16 +8,56 @@
       <img src="modules/core/client/img/constructeurs/mercedes/a/1.jpg" class="img-thumbnail" alt="bmw i3"/>
     </div>
     <div class="col-md-8">
-      <ul class="descriptionDetailsVehicule">
-        <li>Constructeur : <strong> {{voiture.constructeur}}</strong></li>
-        <li>Modele : <strong> {{voiture.modele}}</strong></li>
-        <li>Prix : <strong> {{voiture.prix}}</strong></li>
-        <li>Année :  <strong>{{voiture.annee}}</strong></li>
-        <li>Province :  <strong>{{voiture.province}}</strong></li>
-        <li>Carburant : <strong> {{voiture.carburant}}</strong></li>
-        <li>Transmission : <strong> {{voiture.transmission}}</strong></li>
-        <li>Couleur : <strong> {{voiture.couleur}}</strong></li>
-      </ul>
+
+      <table class="table table-striped table-hover ">
+        <tbody>
+        <tr>
+
+          <td>Constructeur :</td>
+          <td>{{voiture.constructeur}}</td>
+        </tr>
+        <tr>
+
+          <td>Modèle :</td>
+          <td>{{voiture.modele}}</td>
+        </tr>
+        <tr>
+
+          <td>Constructeur :</td>
+          <td>{{voiture.constructeur}}</td>
+        </tr>
+        <tr>
+
+          <td>Type :</td>
+          <td>{{voiture.type}}</td>
+        </tr>
+        <tr>
+
+          <td>Année :</td>
+          <td>{{voiture.annee}}</td>
+        </tr>
+        <tr>
+
+          <td>Province :</td>
+          <td>{{voiture.province}}</td>
+        </tr>
+        <tr>
+
+          <td>Carburant :</td>
+          <td>{{voiture.carburant}}</td>
+        </tr><tr>
+
+          <td>Couleur :</td>
+          <td>{{voiture.couleur}}</td>
+        </tr>
+        <tr>
+
+          <td>Prix :</td>
+          <td>{{voiture.prix}} $</td>
+        </tr>
+
+        </tbody>
+      </table>
     </div>
   </div>
   <br/>
@@ -25,15 +65,16 @@
   <div class="col-md-12">
     <p>{{voiture.description}} </p>
     <a href="mailto:{{voiture.contact_email}}?Subject=Voitureo" target="_top" class="btn btn-success">Envoyer un mail</a>
+    <a href="/#!/voitures" target="_top" class="btn btn-warning">Retour liste</a>
   </div>
 </div>
   <br/><br/>
 
   <div class="pull-right" ng-show="authentication.user._id == voiture.user._id">
-    <a class="btn btn-primary" ui-sref="voitures.edit({voitureId: voiture._id})">
+    <a class="btn btn-primary" ui-sref="voitures.editer({voitureId: voiture._id})">
       <i class="glyphicon glyphicon-edit"></i>
     </a>
-    <a class="btn btn-primary" ng-click="remove();">
+    <a class="btn btn-primary" ng-click="supprimer();">
       <i class="glyphicon glyphicon-trash"></i>
     </a>
   </div>

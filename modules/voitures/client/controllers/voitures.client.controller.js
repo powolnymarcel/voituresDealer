@@ -9,16 +9,26 @@ angular.module('voitures').controller('VoituresController', ['$scope', '$statePa
     $scope.creer = function (isValid) {
       $scope.error = null;
 
-      if (!isValid) {
-        $scope.$broadcast('show-errors-check-validity', 'voitureForm');
+     //if (!isValid) {
+     //  $scope.$broadcast('show-errors-check-validity', 'voitureForm');
 
-        return false;
-      }
+     //  return false;
+     //}
 
       // Create new Voiture object
       var voiture = new Voitures({
-        title: this.title,
-        content: this.content
+        titre         : this.titre,
+        description   : this.description,
+        constructeur  : this.constructeur,
+        modele        : this.modele,
+        type          : this.type,
+        contact_email : this.contact_email,
+        province      : this.province,
+        carburant     : this.carburant,
+        annee         : this.annee,
+        prix          : this.prix,
+        transmission  : this.transmission,
+        couleur       : this.couleur
       });
 
       // Redirect after save
@@ -28,6 +38,18 @@ angular.module('voitures').controller('VoituresController', ['$scope', '$statePa
         // Clear form fields
         $scope.title = '';
         $scope.content = '';
+        $scope.titre= '';
+        $scope.descritpion= '';
+        $scope.constructeur= '';
+        $scope.modele= '';
+        $scope.type= '';
+        $scope.contact_email= '';
+        $scope.province= '';
+        $scope.carburant= '';
+        $scope.annee= '';
+        $scope.prix= '';
+        $scope.transmission= '';
+        $scope.couleur= '';
       }, function (errorResponse) {
         $scope.error = errorResponse.data.message;
       });
@@ -54,11 +76,10 @@ angular.module('voitures').controller('VoituresController', ['$scope', '$statePa
     $scope.update = function (isValid) {
       $scope.error = null;
 
-      if (!isValid) {
-        $scope.$broadcast('show-errors-check-validity', 'voitureForm');
-
-        return false;
-      }
+      //if (!isValid) {
+      //  $scope.$broadcast('show-errors-check-validity', 'voitureForm');
+      //  return false;
+      //}
 
       var voiture = $scope.voiture;
 

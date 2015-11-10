@@ -1,4 +1,4 @@
-<section ng-controller="HomeController">
+<section ng-controller="HomeController" data-ng-init="trouver()">
   <div class="jumbotron text-center">
     <div class="row">
       <div class="col-md-6">
@@ -64,29 +64,11 @@
   </div>
   <div class="row accueilvoitures">
     <h2>Dernieres voitures</h2>
-    <div class="col-md-3">
-    <h3>2015 BMW i3</h3>
+    <div class="col-md-3" ng-repeat="voiture in voitures">
+    <h3>{{voiture.titre}}</h3>
       <img src="modules/core/client/img/constructeurs/bmw/i3/1.jpg" class="img-thumbnail" alt="bmw i3"/>
       <br/><br/>
-      <a href="" class="btn btn-default">Details</a>
-    </div>
-    <div class="col-md-3">
-      <h3>2015 Audi R8</h3>
-      <img src="modules/core/client/img/constructeurs/audi/r8/1.jpg" class="img-thumbnail" alt="bmw i3"/>
-      <br/><br/>
-      <a href="" class="btn btn-default">Details</a>
-    </div>
-    <div class="col-md-3">
-      <h3>2015 Mercedes A</h3>
-      <img src="modules/core/client/img/constructeurs/mercedes/a/1.jpg" class="img-thumbnail" alt="bmw i3"/>
-      <br/><br/>
-      <a href="" class="btn btn-default">Details</a>
-    </div>
-    <div class="col-md-3">
-      <h3>2015 BMW i3</h3>
-      <img src="modules/core/client/img/constructeurs/vw/golf/1.jpg" class="img-thumbnail" alt="bmw i3"/>
-      <br/><br/>
-      <a href="" class="btn btn-default">Details</a>
+      <a href="/#!/voitures/{{voiture._id}}" class="btn btn-default">Details</a>
     </div>
   </div>
 

@@ -39,9 +39,18 @@ exports.read = function (req, res) {
 exports.update = function (req, res) {
   var voiture = req.voiture;
 
-  voiture.title = req.body.title;
-  voiture.content = req.body.content;
-
+  voiture.titre = req.body.titre;
+  voiture.description = req.body.description;
+  voiture.constructeur= req.body.constructeur;
+  voiture.modele= req.body.modele;
+  voiture.type= req.body.type;
+  voiture.contact_email= req.body.contact_email;
+  voiture.province= req.body.province;
+  voiture.carburant= req.body.carburant;
+  voiture.annee= req.body.annee;
+  voiture.prix= req.body.prix;
+  voiture.transmission= req.body.transmission;
+  voiture.couleur= req.body.couleur;
   voiture.save(function (err) {
     if (err) {
       return res.status(400).send({

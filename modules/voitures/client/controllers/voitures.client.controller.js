@@ -105,20 +105,20 @@ angular.module('voitures').controller('VoituresController', ['$scope', '$statePa
     //Pour la recherche on utilise le service UrlService qui se charde de décomposer l'url
     $scope.recherche = function () {
       console.log('******************recherche**************');
-      console.log(UrlService.getQueryStringVar('constructeur'))
+      console.log(UrlService.getQueryStringVar('constructeur'));
       var constructeur =UrlService.getQueryStringVar('constructeur');
       var modele =UrlService.getQueryStringVar('modele');
       var province =UrlService.getQueryStringVar('province');
       var type =UrlService.getQueryStringVar('type');
       var requete={};
 
-      if(constructeur !=0){
+      if(constructeur !==0){
         requete.constructeur=constructeur;
       }
-      if(modele !=0){
+      if(modele !==0){
         requete.modele=modele;
       }
-      if(province !=0){
+      if(province !==0){
         requete.province=province;
       }
 

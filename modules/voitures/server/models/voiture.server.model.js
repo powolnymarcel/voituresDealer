@@ -37,6 +37,8 @@ var VoitureSchema = new Schema({
     default: '',
     trim: true
   },
+  gallerie:[
+    { type: mongoose.Schema.Types.ObjectId, ref: 'Gallerie' }],
   modele: {
     type: String,
     default: '',

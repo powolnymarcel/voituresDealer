@@ -2,13 +2,28 @@
   <div class="page-header">
     <h1>Résultat de la recherche</h1>
   </div>
+  <div ng-if="voitures.length ===0">
+    Aucun véhicule trouvé
+    <br/>
+    <br/>
+    <a href="/" class="btn btn-default">Retour</a>
+  </div>
+  <div class="row voitures" ng-repeat="voiture in voitures">
 
     <div class="col-md-3">
-    image
+      <img ng-src="{{voiture.imageurl}}" class="img-thumbnail" alt="Photo de :{{voiture.titre}}"/>
     </div>
     <div class="col-md-9">
-      resultat
+      <h3>{{voiture.titre}}</h3>
+      <ul>
+        <li>Constructeur : {{voiture.constructeur}}</li>
+        <li>Modele : {{voiture.modele}}</li>
+        <li>Prix : {{voiture.prix}}</li>
+        <li>Année : {{voiture.annee}}</li>
+      </ul>
+      <a href="/#!/voitures/{{voiture._id}}" class="btn btn-default">Détails</a>
     </div>
+  </div>
   <hr/>
 
 </section>

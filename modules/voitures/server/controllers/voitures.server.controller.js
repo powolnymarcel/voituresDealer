@@ -83,7 +83,8 @@ exports.delete = function (req, res) {
  * List of Voitures
  */
 exports.list = function (req, res) {
-  Voiture.find().sort('-created').populate('user', 'displayName').exec(function (err, voitures) {
+            //On passe en paramètre req.query pour faire des conditions ex: un modèle, un constructeur ou Whatever :)
+  Voiture.find(req.query).sort('-created').populate('user', 'displayName').exec(function (err, voitures) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)

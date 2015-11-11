@@ -32,6 +32,11 @@ var VoitureSchema = new Schema({
     trim: true,
     required: 'Le constructeur ne peut pas etre vide!'
   },
+  imageurl: {
+    type: String,
+    default: '',
+    trim: true
+  },
   modele: {
     type: String,
     default: '',

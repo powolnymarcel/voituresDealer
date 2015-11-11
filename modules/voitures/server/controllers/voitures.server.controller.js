@@ -32,7 +32,6 @@ exports.create = function (req, res) {
 exports.read = function (req, res) {
   res.json(req.voiture);
 };
-
 /**
  * Update a voiture
  */
@@ -44,6 +43,7 @@ exports.update = function (req, res) {
   voiture.constructeur= req.body.constructeur;
   voiture.modele= req.body.modele;
   voiture.type= req.body.type;
+  voiture.imageurl= req.body.imageurl;
   voiture.contact_email= req.body.contact_email;
   voiture.province= req.body.province;
   voiture.carburant= req.body.carburant;

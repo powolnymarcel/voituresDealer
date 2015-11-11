@@ -8,5 +8,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
     $scope.trouver = function () {
       $scope.voitures = Voitures.query();
     };
+
+
   }
 ]);

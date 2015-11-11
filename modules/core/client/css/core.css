@@ -55,13 +55,13 @@ a:hover .header-profile-image {
 }
 .fa-car,.fa-tags,.fa-road, .fa-sort-numeric-asc{
   float: left;
-  margin: 15px 10px 0px 0px;
+  margin: 15px 10px 0 0;
 }
 select.form-control{
   width: 80%;
 }
 .btnEnvoyer{
-  margin:0px 0px 0px 25px;
+  margin:0 0 0 25px;
 }
 .img-responsive {
   border: 1px solid black;

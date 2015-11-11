@@ -22,6 +22,7 @@ angular.module('voitures').controller('VoituresController', ['$scope', '$statePa
         constructeur  : this.constructeur,
         modele        : this.modele,
         type          : this.type,
+        imageurl      : this.imageurl,
         contact_email : this.contact_email,
         province      : this.province,
         carburant     : this.carburant,
@@ -43,6 +44,7 @@ angular.module('voitures').controller('VoituresController', ['$scope', '$statePa
         $scope.constructeur= '';
         $scope.modele= '';
         $scope.type= '';
+        $scope.imageurl= '';
         $scope.contact_email= '';
         $scope.province= '';
         $scope.carburant= '';
@@ -57,18 +59,21 @@ angular.module('voitures').controller('VoituresController', ['$scope', '$statePa
 
     // Remove existing Voiture
     $scope.supprimer = function (voiture) {
-      if (voiture) {
-        voiture.$remove();
 
-        for (var i in $scope.voitures) {
-          if ($scope.voitures[i] === voiture) {
-            $scope.voitures.splice(i, 1);
+      if(confirm('Etes-vous sur?')){
+        if (voiture) {
+          voiture.$remove();
+
+          for (var i in $scope.voitures) {
+            if ($scope.voitures[i] === voiture) {
+              $scope.voitures.splice(i, 1);
+            }
           }
+        } else {
+          $scope.voiture.$remove(function () {
+            $location.path('voitures');
+          });
         }
-      } else {
-        $scope.voiture.$remove(function () {
-          $location.path('voitures');
-        });
       }
     };
 
@@ -100,6 +105,7 @@ angular.module('voitures').controller('VoituresController', ['$scope', '$statePa
       $scope.voiture = Voitures.get({
         voitureId: $stateParams.voitureId
       });
+      console.log($scope.voiture);
     };
   }
 ]);

@@ -66,7 +66,7 @@
     <h2>Dernieres voitures</h2>
     <div class="col-md-3" ng-repeat="voiture in voitures">
     <h3>{{voiture.titre}}</h3>
-      <img src="modules/core/client/img/constructeurs/bmw/i3/1.jpg" class="img-thumbnail" alt="bmw i3"/>
+      <img ng-src="{{voiture.imageurl}}" class="img-thumbnail" alt="Photo de :{{voiture.titre}}"/>
       <br/><br/>
       <a href="/#!/voitures/{{voiture._id}}" class="btn btn-default">Details</a>
     </div>

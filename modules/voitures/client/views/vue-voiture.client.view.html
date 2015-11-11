@@ -5,7 +5,7 @@
 
   <div class="row">
     <div class="col-md-4">
-      <img src="modules/core/client/img/constructeurs/mercedes/a/1.jpg" class="img-thumbnail" alt="bmw i3"/>
+      <img ng-src="{{voiture.imageurl}}" class="img-thumbnail" alt="Photo de :{{voiture.titre}}"/>
     </div>
     <div class="col-md-8">
 
@@ -20,11 +20,6 @@
 
           <td>Modèle :</td>
           <td>{{voiture.modele}}</td>
-        </tr>
-        <tr>
-
-          <td>Constructeur :</td>
-          <td>{{voiture.constructeur}}</td>
         </tr>
         <tr>
 
@@ -54,6 +49,11 @@
 
           <td>Prix :</td>
           <td>{{voiture.prix}} $</td>
+        </tr>
+        <tr>
+
+          <td>Url de l'image :</td>
+          <td> {{voiture.imageurl}}</td>
         </tr>
 
         </tbody>

@@ -5,6 +5,7 @@
  */
 var voituresPolicy = require('../policies/voitures.server.policy'),
   voitures = require('../controllers/voitures.server.controller');
+console.log('*********************ROUTE SERVEUR VOITURES chargées !********************************');
 
 module.exports = function (app) {
   // Voitures collection routes

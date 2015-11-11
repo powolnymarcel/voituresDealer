@@ -23,7 +23,7 @@ angular.module('voitures').run(['Menus',
       title: 'Ajouter Voitures',
       state: 'voitures.ajouter',
       //Permet d'afficher le sous menu à un user
-      roles: ['user']
+      roles: ['user','admin']
     });
   }
 ]);

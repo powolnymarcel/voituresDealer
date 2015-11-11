@@ -20,15 +20,21 @@ exports.invokeRolesPolicies = function () {
     }, {
       resources: '/api/voitures/:voitureId',
       permissions: '*'
+    }, {
+      resources: '/api/recherche',
+      permissions: '*'
     }]
   }, {
     roles: ['user'],
     allows: [{
       resources: '/api/voitures',
       permissions: ['get', 'post']
-    }, {
+    },{
       resources: '/api/voitures/:voitureId',
       permissions: ['get']
+    }, {
+      resources: '/api/recherche',
+      permissions: '*'
     }]
   }, {
     roles: ['guest'],
@@ -38,6 +44,9 @@ exports.invokeRolesPolicies = function () {
     }, {
       resources: '/api/voitures/:voitureId',
       permissions: ['get']
+    },{
+      resources: '/api/recherche',
+      permissions: '*'
     }]
   }]);
 };

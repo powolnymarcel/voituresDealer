@@ -4,7 +4,7 @@
       <div class="col-md-6">
         <h3>Trouver votre voitureo!</h3>
 
-        <form action="">
+        <form method="get" action="recherche" >
           <div class="form-group pucerecherche">
             <label for="nouveau" class="labelduFormfinder">
               <input type="radio" name="type" value="nouveau" id="nouveau"/><span>Nouveau</span>
@@ -16,7 +16,7 @@
             <div class="form-group">
               <i class="fa fa-car" style="display:block;"></i>
               <select name="constructeur" class="form-control">
-                <option selected style="display:none;">Marque du véhicule</option>
+                <option selected value="0" style="display:none;">Marque du véhicule</option>
                 <option value="audi">Audi</option>
                 <option value="bmw">BMW</option>
                 <option value="mercedes">Mercedes</option>
@@ -27,18 +27,24 @@
           <div class="form-group">
             <i class="fa fa-tags"></i>
             <select name="modele" class="form-control">
-              <option selected style="display:none;">Modèle du véhicule</option>
-              <option value="aaa">aaa</option>
-              <option value="bbb">bbb</option>
-              <option value="ccc">ccc</option>
-              <option value="ddd">ddd</option>
-              <option value="eee">eee</option>
+              <option value="0" selected style="display:none;">Modèle du véhicule</option>
+              <option value="i3">i3</option>
+              <option value="classe_a">Classe A</option>
+              <option value="r8">r8</option>
+              <option value="golf">golf</option>
+              <option value="land_cruiser">Land cruiser</option>
             </select>
+          </div>
+          <div class="well" ng-repeat="constructeur in constructeurs">
+            <hr style="border: 3px solid orange"/>
+            <h3></h3>
+            {{constructeur.nom}}
+            <hr style="border: 3px solid orange"/>
           </div>
           <div class="form-group">
             <i class="fa fa-road"></i>
             <select name="province" class="form-control">
-            <option selected style="display:none;">Province</option>
+            <option selected value="0" style="display:none;">Province</option>
             <option value="belgique">Toute la Belgique</option>
             <option value="anvers">Anvers</option>
             <option value="brabant-flamand">Brabant Flamand</option>
@@ -53,7 +59,7 @@
             <option value="brabant-wallon">Wallon Brabant</option></select>
           </div>
           <div class="btnEnvoyer">
-            <input type="button" name="envoyer" class="btn btn-default" value="Chercher!"/>
+            <input type="submit" name="envoyer" class="btn btn-default" value="Chercher"/>
           </div>
         </form>
       </div>

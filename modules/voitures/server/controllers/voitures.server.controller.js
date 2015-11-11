@@ -94,6 +94,10 @@ exports.list = function (req, res) {
   });
 };
 
+exports.recherche=function(req,res){
+  console.log('----------------------------->>>>>>>>>Recherche...');
+};
+
 /**
  * Voiture middleware
  */

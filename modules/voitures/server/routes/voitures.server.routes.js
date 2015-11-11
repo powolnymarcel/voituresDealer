@@ -13,6 +13,9 @@ module.exports = function (app) {
     .get(voitures.list)
     .post(voitures.create);
 
+  app.route('api/recherche').all(voituresPolicy.isAllowed)
+    .get(voitures.recherche);
+
   // Single voiture routes
   app.route('/api/voitures/:voitureId').all(voituresPolicy.isAllowed)
     .get(voitures.read)

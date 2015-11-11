@@ -11,7 +11,7 @@ angular.module('voitures').config(['$stateProvider',
         template: '<ui-view/>'
       })
       .state('voitures.liste', {
-        url: '',
+        url: '/',
         templateUrl: 'modules/voitures/client/views/liste-voitures.client.view.html'
       })
       .state('voitures.ajouter', {
@@ -25,6 +25,10 @@ angular.module('voitures').config(['$stateProvider',
         url: '/:voitureId',
         templateUrl: 'modules/voitures/client/views/vue-voiture.client.view.html'
       })
+        .state('recherche', {
+          url: '/recherche',
+          templateUrl: 'modules/voitures/client/views/recherche-voiture.client.view.html'
+        })
       .state('voitures.editer', {
         url: '/:voitureId/editer',
         templateUrl: 'modules/voitures/client/views/editer-voiture.client.view.html',

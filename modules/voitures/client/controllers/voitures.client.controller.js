@@ -98,8 +98,14 @@ angular.module('voitures').controller('VoituresController', ['$scope', '$statePa
     // Find a list of Voitures
     $scope.trouver = function () {
       $scope.voitures = Voitures.query();
+      console.log('******************VOITURES**************');
+      console.log('******************________**************');
+      console.log($scope.voitures);
     };
 
+    $scope.recherche = function () {
+      console.log('******************recherche**************');
+    };
     // Find existing Voiture
     $scope.trouverUnique = function () {
       $scope.voiture = Voitures.get({

@@ -29,18 +29,18 @@ angular.module('voitures').factory('Voitures', ['$resource',
 
       // query string
       // parse quesry string
-      parts["queryString"] = elements[1];
+      parts.queryString = elements[1];
       if ( elements[1] ) {
-        parts["hashString"] = (parts["queryString"].split("#"))[1];
-        parts["requestParams"] = ((parts["queryString"].split("#"))[0]).split("&");
+        parts.hashString = (parts.queryString.split("#"))[1];
+        parts.requestParams = ((parts.queryString.split("#"))[0]).split("&");
 
-        parts["requestParams"].forEach(function(queryStringVariable) {
+        parts.requestParams.forEach(function(queryStringVariable) {
           var __variable = queryStringVariable.split("=");
           parts.queryvars[__variable[0]] = __variable[1];
         });
       }
       // url
-      parts["url"] = elements[0];
+      parts.url = elements[0];
 
 
       // public interface

@@ -112,13 +112,13 @@ angular.module('voitures').controller('VoituresController', ['$scope', '$statePa
       var type =UrlService.getQueryStringVar('type');
       var requete={};
 
-      if(constructeur !==0){
+      if(constructeur !=0){
         requete.constructeur=constructeur;
       }
-      if(modele !==0){
+      if(modele !=0){
         requete.modele=modele;
       }
-      if(province !==0){
+      if(province !=0){
         requete.province=province;
       }
 
@@ -126,7 +126,7 @@ angular.module('voitures').controller('VoituresController', ['$scope', '$statePa
 
 
       $scope.voitures = Voitures.query(requete);
-console.log($scope.voitures);
+      console.log($scope.voitures);
     };
     // Find existing Voiture
     $scope.trouverUnique = function () {
